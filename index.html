@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Welcome</title>
+</head>
+
+<body>
+    <div class="title-bar">
+        <span class="material-icons menu-button" onclick="onMenuButtonClick()">menu</span>
+        <h1>SomeNameHere</h1>
+    </div>
+
+    <nav class="menu-items">
+        <div><span class="material-icons menu-close-button" onclick="onMenuCloseButtonClick()">close</span></div>
+        <div><span class="material-icons">home</span><a href="home.html">Home</a></div>
+        <div><span class="material-icons">school</span><a href="courses.html">Courses</a></div>
+        <div><span class="material-icons">info</span><a href="about-us.html">About Us</a></div>
+    </nav>
+
+
+    <script>
+        function onMenuButtonClick() {
+            document.querySelector('nav.menu-items').classList.toggle('show');
+            document.body.style.backgroundColor = "rgba(0,0,0,0.3)";
+        }
+
+        function onMenuCloseButtonClick() {
+            document.querySelector('nav.menu-items').classList.toggle('show');
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+</body>
+
+</html>
