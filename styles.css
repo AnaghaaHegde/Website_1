@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+div.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    background-color: #343a40;
+}
+
+div.menu a {
+    margin: 0 10px;
+    color: #a3cfff;
+    text-decoration: none;
+}
+
+div.menu a:hover {
+    text-decoration: underline;
+}
