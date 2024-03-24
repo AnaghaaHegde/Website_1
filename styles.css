@@ -4,24 +4,106 @@ body {
     padding: 0;
 }
 
-h1 {
-    text-align: center;
-}
-
-div.menu {
+div.title-bar {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 48px;
-    background-color: #343a40;
+    height: 72px;
 }
 
-div.menu a {
+/* Styling for menu button */
+div.title-bar span.menu-button {
+    color: black;
+    margin-left: 8px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hide Menu Button on Wide Layout */
+@media (min-width: 768px) {
+    div.title-bar span.menu-button {
+        display: none;
+    }
+}
+
+/* Styling for title bar */
+div.title-bar h1 {
+    text-align: center;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+/* Styling for menu items listing */
+nav.menu-items {
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* Styling for menu button */
+nav.menu-items span.menu-close-button {
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hide Menu Close Button on Wide Layout */
+@media (min-width: 768px) {
+    nav.menu-items span.menu-close-button {
+        display: none;
+    }
+}
+
+/* Styling for menu items for wide layout */
+@media (min-width: 768px) {
+    nav.menu-items {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 200px;
+    }
+}
+
+/* Styling for menu items for narrow layout, it should appear as overlay */
+@media (max-width: 768px) {
+    nav.menu-items {
+        position: fixed;
+        height: 100%;
+        width: 0;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+
+    nav.menu-items.show {
+        width: 200px;
+    }
+}
+
+/* General (common) Styling for menu items */
+nav.menu-items div {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+/* Styling for individual menu items */
+nav.menu-items div a {
     margin: 0 10px;
-    color: #a3cfff;
+    color: #415265;
+    padding: 6px 8px 6px 8px;
     text-decoration: none;
+    font-size: 18px;
 }
 
-div.menu a:hover {
+/* Styling for Material Icons in menu */
+nav.menu-items span.material-icons {
+    margin-right: 4px;
+}
+
+
+nav.menu-items a:hover {
     text-decoration: underline;
 }
